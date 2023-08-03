@@ -1,5 +1,5 @@
 # tls-golang
-Exemplo de uso simplificado de TLS.
+Exemplo de uso simplificado de TLS. O cliente já possui o certificado do server e utiliza ele para fazer chamada HTTP.
 
 ## Gerando certificado
 Altere a ultima linha do arquivo __san.cnf__ com o DNS desejado
@@ -23,3 +23,5 @@ Finalmente rode o __openssl x509__ para gerar o certificado:
 ```
 openssl x509 -req -days 3650 -in server.csr -signkey server.key -out server.crt -extensions v3_req -extfile server.cnf
 ```
+
+Com o certificado gerado, faça uma copia dele para o client(pulando alguns passos do TLS).
