@@ -4,7 +4,7 @@ FROM golang:1.20
 WORKDIR /server
 
 # Download Go modules
-COPY ../go.mod ./
+COPY go.mod ./
 
 # Copy the source code. Note the slash at the end, as explained in
 # https://docs.docker.com/engine/reference/builder/#copy
