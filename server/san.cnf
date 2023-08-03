@@ -1,0 +1,12 @@
+[req]
+req_extensions = v3_req
+distinguished_name = req_distinguished_name
+
+[req_distinguished_name]
+commonName = Common Name (e.g., server-service.default.svc.cluster.local)
+
+[v3_req]
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = server-service.default.svc.cluster.local
